@@ -11,24 +11,30 @@
     "adminUsername": {
       "value": "jeremy.gray"
     },
+  
+    "adminPassword":  {
+      "value": "=,9#,Ii1~i@aw|hbUWDLf303AsVtJ:W8b8no#"
+    },    
+    /* 
     "adminPassword": {
-      "value": {
+      
         "reference": {
           "keyVault": {
-            "id": "/subscriptions/d7a93ad9-257f-4404-98f9-2328c6a1fbf6/resourceGroups/cli-group/providers/Microsoft.KeyVault/vaults/JeremyDeploymentKeys "
+           "id":"https://jeremydeploymentkeys.vault.azure.net/secrets/testsecret/d1ac737cefda4fd3a3ea340557c8df06"
+           // "id": "/subscriptions/d7a93ad9-257f-4404-98f9-2328c6a1fbf6/resourceGroups/KeyVault/providers/Microsoft.KeyVault/vaults/JeremyDeploymentKeys"
           },
           "secretName": "testsecret"
-        }
-      }
+        }    
     },
+ */
     "adVMSize": {
       "value": "Standard_DS1_v2"
     },
     "dnsPrefix": {
-      "value": "clitest"
+      "value": "clitest2"
     },
     "publicIPAddressName": {
-      "value": "myPubIpCliTest"
+      "value": "myPubIpCliTest2"
     },
     "domainName": {
       "value": "mydomain.local"
@@ -40,25 +46,25 @@
       "value": "10.1.0.0/16"
     },
     "adSubnetName" : {
-      "value": "adSubnet"
+      "value": "adSubnet2"
     },
     "adSubnet" : {
-      "value": "10.0.0.0/24"
+      "value": "10.1.0.0/24"
     },
     "adPDCNicName" : {  
-      "value": "adPDCNic" 
+      "value": "adPDCNic2" 
     },
     "adPDCNicIPAddress" : {
-      "value": "10.0.0.4"
+      "value": "10.1.0.4"
     },   
     "publicIPAddressType" : {
       "value": "Dynamic"
     },
     "adPDCVMName" : {
-      "value": "adPDC"
+      "value": "adPDC2"
     },  
     "adAvailabilitySetName" : {
-      "value": "adAvailabiltySet"
+      "value": "adAvailabiltySet2"
     }
   }
 }
