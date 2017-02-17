@@ -3,25 +3,62 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "newStorageAccountName": {
-      "value": "GEN-UNIQUE"
+      "value": "clitest45678932"
+    },
+    "storageAccountType": {
+      "value": "Standard_LRS"
     },
     "adminUsername": {
-      "value": "azureuser"
+      "value": "jeremy.gray"
     },
     "adminPassword": {
-      "value": "GEN-PASSWORD"
+      "value": {
+        "reference": {
+          "keyVault": {
+            "id": "/subscriptions/d7a93ad9-257f-4404-98f9-2328c6a1fbf6/resourceGroups/cli-group/providers/Microsoft.KeyVault/vaults/JeremyDeploymentKeys "
+          },
+          "secretName": "testsecret"
+        }
+      }
     },
     "adVMSize": {
-      "value": "Standard_DS2_v2"
+      "value": "Standard_DS1_v2"
     },
     "dnsPrefix": {
-      "value": "GEN-UNIQUE"
+      "value": "clitest"
     },
     "publicIPAddressName": {
-      "value": "myPubIp"
+      "value": "myPubIpCliTest"
     },
     "domainName": {
       "value": "mydomain.local"
+    },
+    "virtualNetworkName": {
+      "value": "test"
+    },
+    "virtualNetworkAddressRange" : {
+      "value": "10.1.0.0/16"
+    },
+    "adSubnetName" : {
+      "value": "adSubnet"
+    },
+    "adSubnet" : {
+      "value": "10.0.0.0/24"
+    },
+    "adPDCNicName" : {  
+      "value": "adPDCNic" 
+    },
+    "adPDCNicIPAddress" : {
+      "value": "10.0.0.4"
+    },   
+    "publicIPAddressType" : {
+      "value": "Dynamic"
+    },
+    "adPDCVMName" : {
+      "value": "adPDC"
+    },  
+    "adAvailabilitySetName" : {
+      "value": "adAvailabiltySet"
     }
   }
 }
