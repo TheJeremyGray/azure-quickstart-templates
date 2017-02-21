@@ -1,6 +1,24 @@
 {
     "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
     "contentVersion": "1.0.0.0",
-    "parameters": {
+    "parameters": {     
+         "vNet1Name": {
+            "value": "adVNETMmmh"
+        },
+        "vNet1BaseAddress": {
+            "value": "10.0.0.0"
+        },
+        "vNet1ResourceGroup": {
+            "value": "moneymoneymoneyhoney"
+        },
+        "vNet2Name": {
+            "value": "adVNETFfi"
+        },
+        "vNet2BaseAddress": {
+            "value": "10.1.0.0"
+        },
+        "vNet2ResourceGroup": {
+            "value": "realfakeinvoices"
+        }
     }
 }
