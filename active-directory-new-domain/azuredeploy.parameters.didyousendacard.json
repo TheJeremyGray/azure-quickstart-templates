@@ -1,0 +1,74 @@
+{
+  "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "adminUsername": {
+      "value": "jeremy.gray"
+    },
+   "adminPassword": {      
+        "reference": {
+          "keyVault": {           
+           "id": "/subscriptions/d7a93ad9-257f-4404-98f9-2328c6a1fbf6/resourceGroups/KeyVault/providers/Microsoft.KeyVault/vaults/JeremyDeploymentKeys"
+          },
+          "secretName": "testsecret"
+        }    
+    },
+    "domainName": {
+      "value": "didyousendacard.com"
+    },
+    "dnsPrefix": {
+      "value": "didyousendacard"
+    },
+    "windowsserver": {
+      "value": "2012-R2-Datacenter"
+    },
+    "_artifactsLocation": {
+      "value": "https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/active-directory-new-domain"
+    },
+    "_artifactsLocationSasToken": {
+      "value": ""
+    },    
+    "virtualNetworkAddressRange": {
+      "value": "10.2.0.0/16"
+    },
+     "adNicIPAddress": {
+      "value": "10.2.0.4"
+    },
+    "adSubnetAddressPrefix": {
+      "value": "10.2.0.0/24"
+    },
+    "storageAccountName": {
+      "value": "didyousendacard"
+    },
+    "publicIPAddressName": {
+      "value": "adPublicIPDysac"
+    },
+    "virtualNetworkName": {
+      "value": "adVNETDysac"
+    },
+    "adLBFE": {
+      "value": "LBFEDysac"
+    },
+    "adLBBE": {
+      "value": "LBBEDysac"
+    },
+    "adRDPNAT": {
+      "value": "adRDPDysac"
+    },
+    "adNicName": {
+      "value": "adNicDysac"
+    },      
+    "adSubnetName": {
+      "value": "adSubnetDysac"
+    },
+    "adAvailabilitySetName": {
+      "value": "adAvailabiltySetDysac"
+    },
+    "adLBName": {
+      "value": "adLoadBalancer"
+    },
+    "adVMName": {
+      "value": "adVM"
+    }
+  }
+}

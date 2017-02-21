@@ -3,7 +3,7 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "newStorageAccountName": {
-      "value": "clitest45678932"
+      "value": "didyousendacard"
     },
     "storageAccountType": {
       "value": "Standard_LRS"
@@ -25,40 +25,40 @@
       "value": "Standard_DS1_v2"
     },
     "dnsPrefix": {
-      "value": "clitest2"
+      "value": "didyousendacard"
     },
     "publicIPAddressName": {
-      "value": "myPubIpCliTest2"
+      "value": "myPubIpDysac"
     },
     "domainName": {
-      "value": "mydomain.local"
+      "value": "didyousendacard.com"
     },
     "virtualNetworkName": {
-      "value": "test"
+      "value": "didyousendacard"
     },
     "virtualNetworkAddressRange" : {
-      "value": "10.1.0.0/16"
+      "value": "10.4.0.0/16"
     },
     "adSubnetName" : {
-      "value": "adSubnet2"
+      "value": "adSubnetDysac"
     },
     "adSubnet" : {
-      "value": "10.1.0.0/24"
+      "value": "10.4.0.0/24"
     },
     "adPDCNicName" : {  
-      "value": "adPDCNic2" 
+      "value": "adPDCNicDysac" 
     },
     "adPDCNicIPAddress" : {
-      "value": "10.1.0.4"
+      "value": "10.4.0.4"
     },   
     "publicIPAddressType" : {
       "value": "Dynamic"
     },
     "adPDCVMName" : {
-      "value": "adPDC2"
+      "value": "adPDCDysac"
     },  
     "adAvailabilitySetName" : {
-      "value": "adAvailabiltySet2"
+      "value": "adAvailabiltySetDysac"
     }
   }
 }
