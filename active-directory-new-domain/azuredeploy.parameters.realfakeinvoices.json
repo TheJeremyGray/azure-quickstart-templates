@@ -17,7 +17,7 @@
       "value": "realfakeinvoices.com"
     },
     "dnsPrefix": {
-      "value": "realfakeinvoices"
+      "value": "rfi"
     },
     "windowsserver": {
       "value": "2012-R2-Datacenter"
@@ -41,28 +41,28 @@
       "value": "realfakeinvoices"
     },
     "publicIPAddressName": {
-      "value": "adPublicIPFfi"
+      "value": "adPublicIPRfi"
     },
     "virtualNetworkName": {
-      "value": "adVNETFfi"
+      "value": "adVNETRfi"
     },
     "adLBFE": {
-      "value": "LBFEFfi"
+      "value": "LBFERfi"
     },
     "adLBBE": {
-      "value": "LBBEFfi"
+      "value": "LBBERfi"
     },
     "adRDPNAT": {
-      "value": "adRDPFfi"
+      "value": "adRDPRfi"
     },
     "adNicName": {
-      "value": "adNicFfi"
+      "value": "adNicRfi"
     },      
     "adSubnetName": {
-      "value": "adSubnetFfi"
+      "value": "adSubnetRfi"
     },
     "adAvailabilitySetName": {
-      "value": "adAvailabiltySetFfi"
+      "value": "adAvailabiltySetRfi"
     },
     "adLBName": {
       "value": "adLoadBalancer"

@@ -1,0 +1,95 @@
+{
+    "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+         "vNetName": {
+            "type": "string",
+            "metadata": {
+                "description": "The name of the first vNet"
+            }
+        }, 
+        "vNetBaseAddress": {
+            "type": "string",
+            "metadata": {
+                "description": "The base address of the first vNet (A.B.C.D)"
+            }
+        }, 
+         "vNetSubnetName": {
+            "type": "string",
+            "metadata": {
+                "description": "The subnet name"
+            }
+        },
+        "destinationResourceGroup": {
+            "type": "string",
+            "metadata": {
+                "description": "The subnet name"
+            }
+        },
+        "vNetDestination" : {
+            "type": "string",
+            "metadata": {
+                "description": "The vNet name in the destination"
+            }
+        }       
+    },
+    "variables": {
+        "vNet": {
+            "name": "[parameters('vNetName')]",
+            "addressSpacePrefix": "[concat(parameters('vNetBaseAddress'),'/24')]",
+            "subnetName": "[parameters('vNetSubnetName')]",
+            "subnetPrefix": "[concat(parameters('vNetBaseAddress'),'/24')]",
+            "peeringName": "[concat(resourceGroup().name, '-to-AADConnect')]"
+        },       
+        "vNetAad": {
+            "name": "[parameters('vNetDestination')]",
+            "resourceGroup" : "[parameters('destinationResourceGroup')]" , 
+            "subscriptionId" : "d7a93ad9-257f-4404-98f9-2328c6a1fbf6"
+        }
+    },
+    "resources": [
+        {
+            "apiVersion": "2016-03-30",
+            "type": "Microsoft.Network/virtualNetworks",
+            "name": "[variables('vNet').name]",
+            "location": "[resourceGroup().location]",
+            "comments": "This is the source vNet",
+            "properties": {
+                "addressSpace": {
+                    "addressPrefixes": [
+                        "[variables('vNet').addressSpacePrefix]"
+                    ]
+                },
+                "subnets": [
+                    {
+                        "name": "[variables('vNet').subnetName]",
+                        "properties": {
+                            "addressPrefix": "[variables('vNet').subnetPrefix]"
+                        }
+                    }
+                ]
+            },
+            "resources": [
+               {
+                   "apiVersion": "2016-06-01",
+                   "type": "virtualNetworkPeerings",
+                   "name": "[variables('vNet').peeringName]",
+                   "location": "[resourceGroup().location]",
+                   "dependsOn": [
+                       "[concat('Microsoft.Network/virtualNetworks/', variables('vNet').name)]"
+                   ],
+                   "comments": "[concat('This is the peering from ',variables('vNet').name,' to ',variables(vNetAad).resourceGroup, '.', variables(vNetAad).name)]",
+                   "properties": {
+                       "allowVirtualNetworkAccess": "true",
+                       "allowForwardedTraffic": "false",
+                       "allowGatewayTransit": "false",
+                       "useRemoteGateways": "false",
+                       "remoteVirtualNetwork": {
+                           "id": "[concat('/subscriptions/',variables('vNetAad').subscriptionId,'/resourceGroups/',variables('vNetAad').resourceGroup,'/providers/Microsoft.Network/virtualNetworks/',variables('vNetAad').name)]"               
+                       }
+                   }
+               }
+            ]
+        }    
+    ]
+}

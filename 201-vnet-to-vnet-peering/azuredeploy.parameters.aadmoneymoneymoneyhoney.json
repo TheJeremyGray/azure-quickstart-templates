@@ -1,0 +1,21 @@
+{
+    "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {     
+         "vNetAadName": {
+            "value": "AADConnect-vnet" //adVNETMmmh"
+        },
+        "vNetAadBaseAddress": {
+            "value": "10.5.0.0"
+        },      
+        "vNetAadSubnetName": {
+            "value": "AADConnect"
+        },
+        "destinationResourceGroup": {
+            "value" : "moneymoneymoneyhoney"
+        },
+        "vNetDestination": {
+            "value" : "adVNETMmmh"
+        }
+    }
+}
