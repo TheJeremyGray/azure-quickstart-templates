@@ -39,7 +39,7 @@
             "addressSpacePrefix": "[concat(parameters('vNetAadBaseAddress'),'/24')]",
             "subnetName": "[parameters('vNetAadSubnetName')]",
             "subnetPrefix": "[concat(parameters('vNetAadBaseAddress'),'/24')]",
-            "peeringName": "[concat(resourceGroup().name, '-to-',parameters('destinationResourceGroup')]"
+            "peeringName": "[concat(resourceGroup().name, '-to-',parameters('destinationResourceGroup'))]"
         },       
         "vNet": {
             "name": "[parameters('vNetDestination')]",
