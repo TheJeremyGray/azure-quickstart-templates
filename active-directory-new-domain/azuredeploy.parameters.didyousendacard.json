@@ -23,7 +23,7 @@
       "value": "2012-R2-Datacenter"
     },
     "_artifactsLocation": {
-      "value": "https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/active-directory-new-domain"
+      "value": "https://raw.githubusercontent.com/TheJeremyGray/azure-quickstart-templates/master/active-directory-new-domain"
     },
     "_artifactsLocationSasToken": {
       "value": ""
