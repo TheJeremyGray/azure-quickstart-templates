@@ -1,0 +1,5 @@
+Name,Priority,Access,SourceAddressPrefix,SourcePortRange,DestinationAddressPrefix,DestinationPortRange,Protocol,Direction,Description
+HTTP,100,Allow,10.4.0.0/16,*,*,80,*,Inbound,Allow HTTP from AAD Connect vNet
+HTTPS,200,Allow,10.4.0.0/16,*,*,443,*,Inbound,Allow HTTPS from AAD Connect vNet
+WinRM,300,Allow,10.4.0.0/16,*,*,5985,*,Inbound,Allow WinRM from AAD Connect vNet
+CertAuth,400,Allow,*,*,*,49443,TCP,Inbound,Allow Cert Auth from Internet
