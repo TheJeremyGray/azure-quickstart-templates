@@ -14,10 +14,10 @@
         }    
     },
     "domainName": {
-      "value": "didyousendacardforreal.com"
+      "value": "didyousendacard.com"
     },
     "dnsPrefix": {
-      "value": "dysac"
+      "value": "didyousendacard"
     },
     "windowsserver": {
       "value": "2012-R2-Datacenter"

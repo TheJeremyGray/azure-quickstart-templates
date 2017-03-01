@@ -1,7 +1,8 @@
 Name,Priority,Access,SourceAddressPrefix,SourcePortRange,DestinationAddressPrefix,DestinationPortRange,Protocol,Direction,Description
-DNS,100,Allow,10.5.0.0/16,*,*,53,*,Inbound,Allow DNS from AAD Connect vNet
-Kerberos,200,Allow,10.5.0.0/16,*,*,88,*,Inbound,Allow Kerb from AAD Connect vNet
-MS-RPC,300,Allow,10.5.0.0/16,*,*,135,*,Inbound,Allow MS-RPC from AAD Connect vNet
-LDAP,400,Allow,10.5.0.0/16,*,*,389,*,Inbound,Allow LDAP from AAD Connect vNet
-LDAP-SSL,500,Allow,10.5.0.0/16,*,*,636,*,Inbound,Allow LDAP-SSL from AAD Connect vNet
-RPC,600,Allow,10.5.0.0/16,*,*,49152-65535,*,Inbound,Allow RPC from AAD Connect vNet
+DNS,100,Allow,10.5.0.0/24,*,*,53,*,Inbound,Allow DNS from AAD Connect vNet
+Kerberos,200,Allow,10.5.0.0/24,*,*,88,*,Inbound,Allow Kerb from AAD Connect vNet
+MS-RPC,300,Allow,10.5.0.0/24,*,*,135,*,Inbound,Allow MS-RPC from AAD Connect vNet
+LDAP,400,Allow,10.5.0.0/24,*,*,389,*,Inbound,Allow LDAP from AAD Connect vNet
+LDAP-SSL,500,Allow,10.5.0.0/24,*,*,636,*,Inbound,Allow LDAP-SSL from AAD Connect vNet
+RPC,600,Allow,10.5.0.0/24,*,*,49152-65535,*,Inbound,Allow RPC from AAD Connect vNet
+RemoteDesktop,700,Allow,10.5.0.0/24,*,*,3389,TCP,Inbound,Allow Remote Desktop

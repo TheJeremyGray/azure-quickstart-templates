@@ -1,3 +1,4 @@
 Name,Priority,Access,SourceAddressPrefix,SourcePortRange,DestinationAddressPrefix,DestinationPortRange,Protocol,Direction,Description
-HTTP,100,Allow,*,*,10.5.0.0/16,80,*,Inbound,Allow HTTP from Internet (AAD)
-HTTPS,200,Allow,*,*,10.5.0.0/16,443,*,Inbound,Allow HTTPS from Internet (AAD)
+HTTP,100,Allow,*,*,10.5.0.0/24,80,*,Inbound,Allow HTTP from Internet (AAD)
+HTTPS,200,Allow,*,*,10.5.0.0/24,443,*,Inbound,Allow HTTPS from Internet (AAD)
+RemoteDesktop,300,Allow,*,*,10.5.0.0/24,3389,TCP,Inbound,Allow Remote Desktop
